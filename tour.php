@@ -13,7 +13,7 @@
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.route&amp;lang=ru-RU&amp;apikey=c90517d4-3f45-4274-b831-0a151368b274" type="text/javascript"></script>
     <script src="https://yandex.st/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
-    <title>ВКР</title>
+    <title>Автотуры</title>
   </head>
   <body>
   <?php

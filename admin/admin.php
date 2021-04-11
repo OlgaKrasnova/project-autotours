@@ -13,7 +13,7 @@
     <script src="../js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     
-    <title>ВКР</title>
+    <title>Автотуры</title>
   </head>
   <body>
 <?php 

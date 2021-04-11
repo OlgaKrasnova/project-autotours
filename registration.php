@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/steps.css">
     <script src="js/jquery-1.7.2.min.js"></script>
    
-    <title>ВКР</title>
+    <title>Автотуры</title>
   </head>
   <body>
   <?php

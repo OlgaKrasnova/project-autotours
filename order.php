@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/steps.css">
     <script src="js/jquery-1.7.2.min.js"></script>
    
-    <title>ВКР</title>
+    <title>Автотуры</title>
   </head>
   <body>
   <?php
@@ -74,7 +74,7 @@
                 };
             ?>
 
-    <form action="registration.php" method="POST" enctype="multipart/form-data" class="big-form">
+    <form method="POST" enctype="multipart/form-data" class="big-form">
                       <p><?php
                       $res_user = mysqli_query($link, "SELECT * FROM `users` WHERE id_user = ".$_SESSION['id_cl']."") or die("Ошибка " . mysqli_error($link));
                       while($row_user = mysqli_fetch_array($res_user)) { 
@@ -97,13 +97,14 @@
                  // если были переданы данные для добавления в БД
                  if( isset($_POST['button']) && $_POST['button']== 'Сохранить')
                  {               
-                 $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                //  $pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-                 $sql_res_prod=mysqli_query($link, 'INSERT INTO users (`FIO`, `login`, `pass`, `role`) VALUES (
-                      "'.htmlspecialchars($_POST['FIO']).'",
-                      "'.htmlspecialchars($_POST['login']).'",
-                      "'.$pass_hash.'",
-                      "P")');
+                 $sql_res_prod=mysqli_query($link, 'INSERT INTO orders (`id_tour`, `id_user`, `departure`, `arrival`, `status`) VALUES (
+                      "'.htmlspecialchars($_GET['id_tour']).'",
+                      "'.htmlspecialchars($_SESSION['id_cl']).'",
+                      "'.htmlspecialchars($_POST['departure']).'",
+                      "'.htmlspecialchars($_POST['arrival']).'",
+                      "1")');
                  
                  // если при выполнении запроса произошла ошибка – выводим сообщение
                  if( mysqli_errno($link) )

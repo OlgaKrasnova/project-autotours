@@ -41,7 +41,6 @@ echo '
 </div>
     <footer>
     <p>
-      Дипломная работа Куйчуевой Яны. Группа 4И1
       <a href="admin/admin.php?p=report">Вход для администратора</a>
     </p>
     </footer>
